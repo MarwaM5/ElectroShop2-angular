@@ -1,0 +1,18 @@
+.shopping-cart {
+  background-color: white;
+  color: #222;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.shopping-cart h2 {
+  color: #14534e;
+  margin-bottom: 20px;
+}
+
+.shopping-cart p {
+  margin: 12px 0;
+  font-size: 16px;
+}

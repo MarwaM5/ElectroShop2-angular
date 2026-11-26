@@ -1,0 +1,42 @@
+h2 {
+  text-align: center;
+  color: #0f766e;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.product img {
+  width: 200px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product button {
+  background-color: #0f766e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}

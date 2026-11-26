@@ -1,0 +1,31 @@
+<h2>Product Details</h2>
+
+<div class="product-details">
+
+  <h3>{{ productName }}</h3>
+
+  <p>{{ productDescription }}</p>
+
+  <p>Original Price: ${{ productPrice }}</p>
+
+  <p>Discount: {{ discountPercentage }}%</p>
+
+  <p>Price After Discount: ${{ calculateDiscount() }}</p>
+
+  <img [src]="productImage" width="250">
+
+  <p>Quantity: {{ quantity() }}</p>
+
+  <p>Availability: {{ isAvailable ? 'Available' : 'Out of Stock' }}</p>
+
+  <button (click)="decreaseQuantity()">−</button>
+
+  <span>{{ quantity() }}</span>
+
+  <button (click)="increaseQuantity()">+</button>
+
+  <br><br>
+
+  <button (click)="addToCart()">Add to Cart</button>
+
+</div>

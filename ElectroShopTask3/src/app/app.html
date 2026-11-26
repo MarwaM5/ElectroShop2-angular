@@ -1,0 +1,69 @@
+
+<section class="store-header">
+  <h1>{{ storeName }}</h1>
+  <p>{{ storeDescription }}</p>
+</section>
+
+<section class="store-info">
+  <p>Address: {{ storeAddress }}</p>
+  <p>Total Products: {{ totalProducts }}</p>
+  <p>Currency: {{ currency }}</p>
+</section>
+
+<section class="store-status">
+  <h2>{{ storeStatus }}</h2>
+</section>
+
+
+<section class="featured-product">
+  <h2>Featured Product</h2>
+
+  <h3>{{ featuredProduct.Name }}</h3>
+  <p>{{ featuredProduct.Description }}</p>
+  <p>Original Price: ${{ featuredProduct.Price }}</p>
+  <p>Final Price: ${{ finalPrice }}</p>
+  <p>{{ discountPercentage }}% Discount</p>
+</section>
+
+
+<section class="our-products">
+  <h2>Our Products</h2>
+
+  <p>{{ productNames }}</p>
+  <p>{{ productPrices }}</p>
+</section>
+
+
+<section class="store-summary">
+  <h2>Store Summary</h2>
+
+  <p>Total Products: {{ totalProducts }}</p>
+  <p>Most Expensive Product Price: ${{ mostExpensivePrice }}</p>
+  <p>Cheapest Product Price: ${{ cheapestPrice }}</p>
+  <p>Total Value of All Products: ${{ totalProductsValue }}</p>
+</section>
+
+<app-header></app-header>
+<app-navbar></app-navbar>
+<app-product-list></app-product-list>
+<!-- <app-product-details></app-product-details> -->
+<app-footer></app-footer>
+
+
+
+<button class="change-product-btn" (click)="changeProduct()">Change Product</button>
+<app-product-details
+  [productName]="productName()"
+  [productDescription]="productDescription()"
+  [productPrice]="productPrice()"
+  [isAvailable]="isAvailable()"
+  (productAdded)="addToCart($event.name, $event.quantity)">
+</app-product-details>
+
+
+<app-shopping-cart
+  [productName]="cartProductName"
+  [productPrice]="cartProductPrice"
+  [quantity]="cartQuantity"
+  [totalPrice]="cartTotalPrice">
+</app-shopping-cart>
